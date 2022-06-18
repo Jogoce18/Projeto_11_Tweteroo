@@ -15,6 +15,7 @@ let userBackup = {
   avatar:""
 }
 
+
 app.post('/sign-up', (req, res) => {
   const user = req.body; 
   pessoas.push(user);
@@ -28,6 +29,7 @@ app.post('/tweets', (req, res) => {
   tweets.push({...userBackup, ...tweet});
   res.send("Ok");
 });
+
 
 app.get('/tweets', (req, res) => {
   if(tweets.length<=10){
